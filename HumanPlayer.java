@@ -12,25 +12,21 @@ public class HumanPlayer extends Player{
     private boolean bust;
 
     public HumanPlayer(String name, int money) {
+
         this.name = name;
+        this.money = money;
     }
 
     public void play() {
-        while (!stand && !bust) {
-            if(getMyValue() > 21){
-                bust = true;
-                break;
-            }
+
 
 
 
 
             //option to hit or stand
             //need an option to split the hand
-        }
-        if (bust){
-            loseHand();
-        }
+
+
     }
 
     public void splitDoubles() {
