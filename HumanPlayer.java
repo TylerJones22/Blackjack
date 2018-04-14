@@ -9,6 +9,7 @@ public class HumanPlayer extends Player{
     private boolean stand;
     private int cardValue;
 
+
     private boolean bust;
 
     public HumanPlayer(String name, int money) {
@@ -18,6 +19,7 @@ public class HumanPlayer extends Player{
     }
 
     public void play() {
+
 
 
 

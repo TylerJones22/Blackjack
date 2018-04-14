@@ -53,10 +53,7 @@ public class GameTable {
         for (int i = 0; i < numberOfDecks; i++) {
             decks.add(new Deck());
         }
-        for (Deck d: decks
-             ) {
-            d.displayList();
-        }
+
     }
 
 
