@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Created by tyler on 10/7/16.
  */
 public class GameTable {
-    static ArrayList<HumPlayer> playerList = new ArrayList<>();
+    static ArrayList<HumanPlayer> playerList = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     static private int minimumBet = 25;
 
@@ -13,33 +13,9 @@ public class GameTable {
 
 
         setup();
-        d.displayList();
-        //game loop
-        while (true) {
-            for (Player p : playerList) {
-                int bet;
-               do {
-                    System.out.println("What would you like to bet, " + p.getName() + "?");
-                    while (!sc.hasNextInt()) {
-                        System.out.println("Invalid bet.");
-                        sc.next();
-                    }
-                    bet = sc.nextInt();
-                    p.bet(bet);
-                } while (bet < minimumBet);
 
-                p.receiveCard(d.dealCard());
-                p.receiveCard(d.dealCard());
 
-            }
-            break;
-        }
 
-        for (Player p : playerList) {
-            for (int i = 0; i < p.getMyCards().size(); i++) {
-                p.getMyCards().get(i).printCard();
-            }
-        }
 
 
     }
@@ -47,7 +23,7 @@ public class GameTable {
     public static int players;
     public static int startingAmount = 200;
 
-    public static int numberOfDecks = 6;
+    public static int numberOfDecks = 1;
 
     Dealer dealer = new Dealer();
 
@@ -73,19 +49,18 @@ public class GameTable {
 
         for (int i = 0; i < players; i++) {
             System.out.print("Enter a player name: ");
-            playerList.add(new Player(sc.next(), startingAmount));
+            playerList.add(new HumanPlayer(sc.next(), startingAmount));
         }
 
         for (int i = 0; i < numberOfDecks; i++) {
             decks.add(new Deck());
         }
-
+        for (Deck d: decks
+             ) {
+            d.displayList();
+        }
     }
 
 
-    public String display() {
-        return "todo";
-
-    }
 
 }

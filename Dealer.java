@@ -13,9 +13,8 @@ public class Dealer extends Player{
     public void play(){
         if(getMyValue() < 17){
             receiveCard(deck.dealCard());
-        } else if (getMyValue() > 21 && numberOfAces() > 0){
-
         }
+
     }
 
     public Card giveCard(){

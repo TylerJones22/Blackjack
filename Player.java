@@ -32,14 +32,14 @@ abstract public class Player {
 
     public void displayCards() {
         for (Card c : myCards) {
-            c.printCard();
+            c.getName();
         }
     }
 
     public int getMyValue() {
         int tempValue = 0;
         for (Card c : myCards) {
-            tempValue += c.getValue();
+            tempValue += c.getNumericValue();
         }
         myValue = tempValue;
         return tempValue;
@@ -47,13 +47,7 @@ abstract public class Player {
 
     }
 
-    public int numberOfAces() {
-        for (Card c : myCards) {
-            if (c.getValue() == 11) this.numberOfAces++;
-        }
-        return numberOfAces;
 
-    }
 
     public void handleAces(){
         while(myValue > 21){
