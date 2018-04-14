@@ -1,6 +1,4 @@
-/**
- * Created by tyler on 10/7/16.
- */
+
 public class Dealer extends Player{
     Deck deck;
 

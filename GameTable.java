@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by tyler on 10/7/16.
- */
+
 public class GameTable {
     static ArrayList<HumanPlayer> playerList = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);

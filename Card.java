@@ -1,6 +1,4 @@
-/**
- * Created by tyler on 10/7/16.
- */
+
 
 public class Card {
 
@@ -34,6 +32,7 @@ public class Card {
             }
     }
     public void setName(){
+        //Card name is built from the index of the card and then the suit. For example, Ace of Hearts.
         StringBuilder builder = new StringBuilder(index.getCardName());
         builder.append(" of ");
         builder.append(suit.getName());

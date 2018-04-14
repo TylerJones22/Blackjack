@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * Created by tyler on 10/18/16.
- */
+
 abstract public class Player {
 
     protected ArrayList<Card> myCards;

@@ -27,6 +27,7 @@ public class Deck {
     }
 
     public void populateDeck(){
+        //Makes a deck with every value and every suit from the CardSuit and CardIndex enums.
         for(CardSuit suit: CardSuit.values()){
             for (CardIndex index: CardIndex.values()){
                 entireDeck.add(new Card(suit,index));
@@ -36,7 +37,7 @@ public class Deck {
     }
 
     public void displayList() {
-
+        //Test method to make sure my deck is being built of the right cards.
         for (Card c : entireDeck) {
             System.out.print(c.getName() + "\n");
         }
